@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
+module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk );
 
 	// Top-level Inputs and Outputs
 	// These connect directly to FPGA pins via the pin map
@@ -33,10 +33,6 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 	// RS232 Lines
 	input			rs232_rx;
 	output			rs232_tx;
-	
-	//keypad
-	output [3:0] col;
-	input [3:0] row;
 	
 	// Wires and Register Declarations
 	//
@@ -78,16 +74,6 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 		.reset(led_reset),
 		.clk(clk)
 	);
-	
-	//keypad requires timer to shift col bits;
-	wire [3:0] upc_out;
-
-		up_counter upc(
-			.clk(clk),
-			.reset(reset),
-			.out(upc_out)
-		);
-	assign col = upc_out;
 
 	
 	// UART and control logic
@@ -138,13 +124,12 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 	// Output Ports:
 	// * leds_out : port 01
 	// * uart_data_tx : port 03
-	// * keys: port 06
-	// 
+	//
 	// These signals are effectively "write enable" lines for the UART and LED
 	// Driver modules. They must be asserted when PB is outputting to the
 	// corresponding port
 	assign write_to_leds = pb_write_strobe & (pb_port_id == 8'h01);
-	assign write_to_uart = pb_write_strobe & (pb_port_id == 8'h03 || pb_port_id == 8'h06);
+	assign write_to_uart = pb_write_strobe & (pb_port_id == 8'h03);
 	//
 	// Handle PicoBlaze Input Port Logic
 	// Input Ports:
@@ -156,7 +141,6 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 	// This process block gets the value of the requested input port device
 	// and passes it to PBs in_port. When PB is not requestng data from
 	// a valid input port, set the input to static 0.
-	reg [2:0] keyflag;
 	always @(posedge clk or posedge pb_reset)
 	begin
 		if(pb_reset) begin
@@ -166,30 +150,10 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 			// Set pb input port to appropriate value
 			case(pb_port_id)
 				8'h00: pb_in_port <= switches;
-				8'h02: pb_in_port <= uart_rx_data; //waas uart_data_rx
+				8'h02: pb_in_port <= uart_data_rx;
 				8'h04: pb_in_port <= {7'b0000000,uart_data_present};
 				8'h05: pb_in_port <= {7'b0000000,uart_buffer_full};
-				8'h06:	begin
-							if(keyflag == 3'd1 && col[0] && row[0]) begin
-								pb_in_port <= 8'h01;
-							end
-							else if(keyflag == 3'd2 && col[0] && row[1]) begin
-								pb_in_port <= 8'h02;
-							end
-							else if(keyflag == 3'd3 && col[0] && row[2]) begin
-								pb_in_port <= 8'd03;
-							end
-							else if(keyflag == 3'd4 && col[1] && row[0]) begin
-								pb_in_port <= 8'h04;
-							end
-							else if(keyflag == 3'd5 && col[1] && row[1]) begin
-								pb_in_port <= 8'h05;
-							end
-							else begin
-								pb_in_port <= 8'h0a;
-							end
-						end
-				default: pb_in_port <= 8'h0a;
+				default: pb_in_port <= 8'h00;
 			endcase
 			// Set up acknowledge/enable signals.
 			//
@@ -200,22 +164,6 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 			// ports will not need this.
 			read_from_uart <= pb_read_strobe & (pb_port_id == 8'h04);
 		end
-	end
-	
-	always @(posedge clk)
-	begin
-		if(!col[0]&& !row[0] )
-			keyflag <= 3'd1;
-		else if (!col[0]&& !row[1] )
-			keyflag <= 3'd2;
-		else if (!col[0]&& !row[2] )
-			keyflag <= 3'd3;
-		else if (!col[1]&& !row[0] )
-			keyflag <= 3'd4;
-		else if (!col[1]&& !row[1] )
-			keyflag <= 3'd5;
-		else
-			keyflag <= 3'd0;
 	end
 
 endmodule

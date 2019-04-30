@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: loopback.prj
 
@@ -99,9 +99,6 @@ DSP48 Utilization Ratio            : 100
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
----- Other Options
-Cores Search Directories           : {"../test/ipcore_dir"  }
-
 =========================================================================
 
 
@@ -126,22 +123,6 @@ Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\up_counter.v" into
 Parsing module <up_counter>.
 Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v" into library work
 Parsing module <loopback>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\infrastructure.v" into library work
-Parsing module <infrastructure>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_controller.v" into library work
-Parsing module <iodrp_controller>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_mcb_controller.v" into library work
-Parsing module <iodrp_mcb_controller>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_raw_wrapper.v" into library work
-Parsing module <mcb_raw_wrapper>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration.v" into library work
-Parsing module <mcb_soft_calibration>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration_top.v" into library work
-Parsing module <mcb_soft_calibration_top>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_ui_top.v" into library work
-Parsing module <mcb_ui_top>.
-Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\memc_wrapper.v" into library work
-Parsing module <memc_wrapper>.
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -317,13 +298,14 @@ _2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=2
 Synthesizing Unit <loopback>.
     Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v".
 WARNING:Xst:647 - Input <row<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v" line 122: Output port <interrupt_ack> of the instance <CPU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v" line 124: Output port <interrupt_ack> of the instance <CPU> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <read_from_uart>.
     Found 8-bit register for signal <pb_in_port>.
     Found 3-bit register for signal <keyflag>.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0094> created at line 167.
     Summary:
 	inferred  12 D-type flip-flop(s).
-	inferred   7 Multiplexer(s).
+	inferred   8 Multiplexer(s).
 Unit <loopback> synthesized.
 
 Synthesizing Unit <led_driver_wrapper>.
@@ -722,9 +704,10 @@ Macro Statistics
  32-bit register                                       : 1
  4-bit register                                        : 1
  8-bit register                                        : 2
-# Multiplexers                                         : 7
+# Multiplexers                                         : 8
  3-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 5
+ 8-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -750,9 +733,10 @@ Macro Statistics
  32-bit up counter                                     : 1
 # Registers                                            : 156
  Flip-Flops                                            : 156
-# Multiplexers                                         : 7
+# Multiplexers                                         : 8
  3-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 5
+ 8-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -835,13 +819,14 @@ Primitive and Black Box Usage:
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 40
-#      LUT2                        : 1
-#      LUT3                        : 5
-#      LUT4                        : 7
-#      LUT5                        : 27
-#      LUT6                        : 53
+#      LUT2                        : 2
+#      LUT3                        : 6
+#      LUT4                        : 5
+#      LUT5                        : 19
+#      LUT6                        : 60
 #      LUT6_2                      : 78
 #      MUXCY                       : 69
+#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 69
 # FlipFlops/Latches                : 198
@@ -859,8 +844,8 @@ Primitive and Black Box Usage:
 #      SRL16E                      : 16
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 18
-#      IBUF                        : 5
+# IO Buffers                       : 26
+#      IBUF                        : 13
 #      OBUF                        : 13
 
 Device utilization summary:
@@ -871,22 +856,22 @@ Selected Device : 6slx45csg484-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             198  out of  54576     0%  
- Number of Slice LUTs:                  254  out of  27288     0%  
-    Number used as Logic:               214  out of  27288     0%  
+ Number of Slice LUTs:                  253  out of  27288     0%  
+    Number used as Logic:               213  out of  27288     0%  
     Number used as Memory:               40  out of   6408     0%  
        Number used as RAM:               24
        Number used as SRL:               16
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    314
-   Number with an unused Flip Flop:     116  out of    314    36%  
-   Number with an unused LUT:            60  out of    314    19%  
-   Number of fully used LUT-FF pairs:   138  out of    314    43%  
+ Number of LUT Flip Flop pairs used:    311
+   Number with an unused Flip Flop:     113  out of    311    36%  
+   Number with an unused LUT:            58  out of    311    18%  
+   Number of fully used LUT-FF pairs:   140  out of    311    45%  
    Number of unique control sets:        14
 
 IO Utilization: 
- Number of IOs:                          20
- Number of bonded IOBs:                  19  out of    320     5%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                  27  out of    320     8%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                4  out of    116     3%  
@@ -927,9 +912,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 9.533ns (Maximum Frequency: 104.898MHz)
-   Minimum input arrival time before clock: 4.925ns
-   Maximum output required time after clock: 3.874ns
+   Minimum period: 9.644ns (Maximum Frequency: 103.687MHz)
+   Minimum input arrival time before clock: 4.541ns
+   Maximum output required time after clock: 3.847ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -938,10 +923,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.533ns (frequency: 104.898MHz)
-  Total number of paths / destination ports: 36941 / 523
+  Clock period: 9.644ns (frequency: 103.687MHz)
+  Total number of paths / destination ports: 36526 / 523
 -------------------------------------------------------------------------
-Delay:               9.533ns (Levels of Logic = 6)
+Delay:               9.644ns (Levels of Logic = 6)
   Source:            CPU/pblaze_rom/kcpsm6_rom_lh (RAM)
   Destination:       UART/transmitter/pointer0_flop (FF)
   Source Clock:      clk rising
@@ -953,15 +938,15 @@ Delay:               9.533ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      RAMB16BWER:CLKA->DOA3    1   1.850   0.579  CPU/pblaze_rom/kcpsm6_rom_lh (CPU/pblaze_rom/n0015<3>)
      LUT6_2:I0->O5        16   0.568   1.004  CPU/pblaze_rom/s6_4k_mux12_lut (CPU/instruction<12>)
-     LUT6_2:I4->O6        10   0.568   1.085  CPU/pblaze_cpu/data_path_loop[4].output_data.sy_kk_mux_lut (pb_port_id<5>)
-     LUT5:I2->O            6   0.205   0.745  write_to_uart11 (write_to_uart1)
+     LUT6_2:I4->O6        11   0.568   1.111  CPU/pblaze_cpu/data_path_loop[4].output_data.sy_kk_mux_lut (pb_port_id<5>)
+     LUT5:I2->O            9   0.205   0.830  pb_read_strobe_pb_port_id[7]_AND_24_o11 (pb_read_strobe_pb_port_id[7]_AND_24_o1)
      LUT5:I4->O           12   0.205   0.908  write_to_uart1 (write_to_uart)
      LUT6_2:I2->O5         1   0.568   0.579  UART/transmitter/data_present_lut (UART/transmitter/en_pointer)
      LUT6_2:I2->O6         1   0.568   0.000  UART/transmitter/pointer01_lut (UART/transmitter/pointer_value<1>)
      FDR:D                     0.102          UART/transmitter/pointer1_flop
     ----------------------------------------
-    Total                      9.533ns (4.634ns logic, 4.899ns route)
-                                       (48.6% logic, 51.4% route)
+    Total                      9.644ns (4.634ns logic, 5.010ns route)
+                                       (48.0% logic, 52.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'pb_interrupt'
@@ -986,9 +971,9 @@ Delay:               2.729ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 133 / 92
+  Total number of paths / destination ports: 112 / 92
 -------------------------------------------------------------------------
-Offset:              4.925ns (Levels of Logic = 4)
+Offset:              4.541ns (Levels of Logic = 5)
   Source:            row<1> (PAD)
   Destination:       pb_in_port_0 (FF)
   Destination Clock: clk rising
@@ -997,20 +982,21 @@ Offset:              4.925ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   1.222   1.021  row_1_IBUF (row_1_IBUF)
-     LUT5:I1->O            4   0.203   1.048  keyflag[2]_row[1]_AND_11_o<0>1 (keyflag[2]_row[1]_AND_11_o)
-     LUT6:I0->O            1   0.203   0.924  pb_port_id[7]_uart_rx_data[7]_select_19_OUT<0>1 (pb_port_id[7]_uart_rx_data[7]_select_19_OUT<0>1)
-     LUT6:I1->O            1   0.203   0.000  pb_port_id[7]_uart_rx_data[7]_select_19_OUT<0>3 (pb_port_id[7]_uart_rx_data[7]_select_19_OUT<0>)
+     IBUF:I->O             9   1.222   1.077  row_1_IBUF (row_1_IBUF)
+     LUT4:I0->O            1   0.203   0.000  Mmux_pb_port_id[7]_switches[7]_select_20_OUT12_G (N11)
+     MUXF7:I1->O           1   0.140   0.808  Mmux_pb_port_id[7]_switches[7]_select_20_OUT12 (Mmux_pb_port_id[7]_switches[7]_select_20_OUT11)
+     LUT6:I3->O            1   0.205   0.580  Mmux_pb_port_id[7]_switches[7]_select_20_OUT13 (Mmux_pb_port_id[7]_switches[7]_select_20_OUT12)
+     LUT6:I5->O            1   0.205   0.000  Mmux_pb_port_id[7]_switches[7]_select_20_OUT14 (pb_port_id[7]_switches[7]_select_20_OUT<0>)
      FDC:D                     0.102          pb_in_port_0
     ----------------------------------------
-    Total                      4.925ns (1.933ns logic, 2.992ns route)
-                                       (39.2% logic, 60.8% route)
+    Total                      4.541ns (2.077ns logic, 2.464ns route)
+                                       (45.7% logic, 54.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 13 / 13
 -------------------------------------------------------------------------
-Offset:              3.874ns (Levels of Logic = 1)
+Offset:              3.847ns (Levels of Logic = 1)
   Source:            upc/out_0 (FF)
   Destination:       col<0> (PAD)
   Source Clock:      clk rising
@@ -1019,11 +1005,11 @@ Offset:              3.874ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             10   0.447   0.856  upc/out_0 (upc/out_0)
+     FDE:C->Q              9   0.447   0.829  upc/out_0 (upc/out_0)
      OBUF:I->O                 2.571          col_0_OBUF (col<0>)
     ----------------------------------------
-    Total                      3.874ns (3.018ns logic, 0.856ns route)
-                                       (77.9% logic, 22.1% route)
+    Total                      3.847ns (3.018ns logic, 0.829ns route)
+                                       (78.5% logic, 21.5% route)
 
 =========================================================================
 
@@ -1035,7 +1021,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    9.533|         |         |         |
+clk            |    9.644|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock pb_interrupt
@@ -1049,8 +1035,8 @@ pb_interrupt   |    2.729|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.99 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.04 secs
  
 --> 
 

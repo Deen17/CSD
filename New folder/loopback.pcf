@@ -1,4 +1,27 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Apr 30 00:41:03 2019
+// Written by: Map P.20131013 on Tue Apr 30 11:08:31 2019
 //! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "D11" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "W3" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "Y4" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "Y1" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "Y3" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "AB4" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "W1" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "AB3" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "AA4" LEVEL 1;
+COMP "reset" LOCATE = SITE "E6" LEVEL 1;
+COMP "rs232_rx" LOCATE = SITE "T19" LEVEL 1;
+COMP "rs232_tx" LOCATE = SITE "T20" LEVEL 1;
+COMP "col<0>" LOCATE = SITE "H8" LEVEL 1;
+COMP "col<1>" LOCATE = SITE "J7" LEVEL 1;
+COMP "col<2>" LOCATE = SITE "K8" LEVEL 1;
+COMP "col<3>" LOCATE = SITE "K7" LEVEL 1;
+COMP "row<0>" LOCATE = SITE "E4" LEVEL 1;
+COMP "row<1>" LOCATE = SITE "F3" LEVEL 1;
+COMP "row<2>" LOCATE = SITE "G8" LEVEL 1;
+COMP "row<3>" LOCATE = SITE "G7" LEVEL 1;
+SCHEMATIC END;
 
