@@ -22,3 +22,6 @@ NET "reset" LOC= E6;
 	NET "row[1]"	LOC = F3;#	|	IOSTANDARD=LVCMOS18;		#Bank = 3, pin name = IO_L60N_3,	Sch name = ROW2
 	NET "row[2]"	LOC = G8;#	|	IOSTANDARD=LVCMOS18;		#Bank = 3, pin name = IO_L73P_3,	Sch name = ROW3
 	NET "row[3]"	LOC = G7;#	|	IOSTANDARD=LVCMOS18; 	
+	
+NET "rs232_tx" LOC= T20;
+NET "rs232_rx" LOC= T19;

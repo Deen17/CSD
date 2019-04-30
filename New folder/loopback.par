@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-ABAAU9H::  Mon Apr 29 23:59:39 2019
+DESKTOP-ABAAU9H::  Tue Apr 30 00:13:25 2019
 
 par -w -intstyle ise -ol high -mt off loopback_map.ncd loopback.ncd
 loopback.pcf 
@@ -110,29 +110,29 @@ Finished initial Timing Analysis.  REAL time: 5 secs
 Starting Router
 
 
-Phase  1  : 1914 unrouted;      REAL time: 5 secs 
+Phase  1  : 1914 unrouted;      REAL time: 6 secs 
 
 Phase  2  : 1317 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 536 unrouted;      REAL time: 6 secs 
+Phase  3  : 536 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 536 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  4  : 536 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
 Updating file: loopback.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
-Total REAL time to Router completion: 9 secs 
-Total CPU time to Router completion: 9 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Total REAL time to Router completion: 10 secs 
+Total CPU time to Router completion: 10 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -169,10 +169,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 10 secs 
-Total CPU time to PAR completion: 9 secs 
+Total REAL time to PAR completion: 11 secs 
+Total CPU time to PAR completion: 11 secs 
 
-Peak Memory Usage:  4610 MB
+Peak Memory Usage:  4611 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

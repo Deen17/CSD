@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.39 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.51 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.39 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.51 secs
  
 --> Reading design: loopback.prj
 
@@ -1053,8 +1053,8 @@ pb_interrupt   |    2.729|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.75 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.35 secs
  
 --> 
 
