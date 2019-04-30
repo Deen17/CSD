@@ -8,7 +8,7 @@ CONSTANT uart_data_rx     , 02    ; UART receive read port
 CONSTANT uart_data_tx     , 03    ; UART transmit write port
 CONSTANT data_present     , 04    ; UART stat read port, lsb
 CONSTANT buffer_full      , 05    ; UART stat read port, lsb
-CONSTANT keys, 			  , 06    ; KEYPAD input
+CONSTANT keys 			  , 06    ; KEYPAD input
 
 ;================================================================
 ; Useful constant declarations...
@@ -295,39 +295,39 @@ cold_start:     LOAD     s0, s0            ; (nop)
 				load s4, 40
 				jump main
 
-rest:			
+rest:
 				load s0, ascii_SPACE
-				STORE s0, 00 
+				STORE s0, 00
 				load s0, ascii_a
-				STORE s0, 01 
+				STORE s0, 01
 				load s0, ascii_l
-				STORE s0, 02 
+				STORE s0, 02
 				load s0, ascii_l
-				STORE s0, 03 
+				STORE s0, 03
 				load s0, ascii_SPACE
-				STORE s0, 04 
+				STORE s0, 04
 				load s0, ascii_M
-				STORE s0, 05 
+				STORE s0, 05
 				load s0, ascii_e
-				STORE s0, 06 
+				STORE s0, 06
 				load s0, ascii_s
-				STORE s0, 07 
+				STORE s0, 07
 				load s0, ascii_s
-				STORE s0, 08 
+				STORE s0, 08
 				load s0, ascii_a
-				STORE s0, 09 
+				STORE s0, 09
 				load s0, ascii_g
-				STORE s0, 0A 
+				STORE s0, 0A
 				load s0, ascii_e
-				STORE s0, 0B 
+				STORE s0, 0B
 				load s0, ascii_s
-				STORE s0, 0C 
+				STORE s0, 0C
 				load s0, ascii_CR
-				STORE s0, 0D 
+				STORE s0, 0D
 				load s0, ascii_LF
-				STORE s0, 0E 
+				STORE s0, 0E
 				load s0, ascii_5
-				STORE s0, 0F 
+				STORE s0, 0F
 				load s0, ascii_RPAREN
 				STORE s0, 10
 				load s0, ascii_V
@@ -349,7 +349,7 @@ rest:
 				load s4, 19 ; + 1
 				Load s5, 00
 
-main:			
+main:
 				XOR		 s0, s0		; Index to loop through
 
 next_letter:
@@ -369,7 +369,7 @@ buffer_full_call:
 				load sF, sF
 				jump next_letter
 
-				
+
                 ; Code 1
                 ; Write code to output a message to the
                 ; serial port.  The message must be longer
@@ -380,7 +380,7 @@ led_echo:       LOAD     s0, s0            ; (nop)
 				xor s0, FF
 				output s0, leds
 				jump rs232_echo
-				
+
                 ; Code 2
                 ; Write code to read the switch state and
                 ; write it, inverted, to the LED output port.
@@ -395,26 +395,55 @@ rs232_echo:     LOAD     s0, s0            ; (nop)
 				compare s5, 01
 				jump z, rest
 				jump led_echo
-				
+
 send_back:		output s1, uart_data_tx
-				compare s5, 0
+				compare s5, 00
 				jump z, key_input
 				jump led_echo
-				
+
                 ; Code 3
                 ; Write code to check if a byte has been
                 ; received by the uart.  If so, write it
                 ; back to the uart transmit port.  Then...
-				
-				
+
+
                 ;JUMP     led_echo          ; endless loop
 
-				
+
 key_input:
 				input s0, keys
 				compare s0, 0A
-				jump nz, process_key
-				jump key_input
+				jump z, key_input
+				load s4, 01
+				load s5, 00
+				compare s0, 01
+				jump z, key_1
+				compare s0, 02
+				jump z, key_2
+				compare s0, 03
+				jump z, key_3
+				compare s0, 04
+				jump z, key_4
+				compare s0, 05
+				jump z, key_5
 
-process_key:
-				
+key_1:
+				load s0, ascii_1
+				output s0, uart_data_tx
+				jump main
+key_2:
+				load s0, ascii_2
+				output s0, uart_data_tx
+				jump main
+key_3:
+				load s0, ascii_2
+				output s0, uart_data_tx
+				jump main
+key_4:
+				load s0, ascii_3
+				output s0, uart_data_tx
+				jump main
+key_5:
+				load s0, ascii_4
+				output s0, uart_data_tx
+				jump main

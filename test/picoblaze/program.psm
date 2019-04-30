@@ -8,7 +8,7 @@ CONSTANT uart_data_rx     , 02    ; UART receive read port
 CONSTANT uart_data_tx     , 03    ; UART transmit write port
 CONSTANT data_present     , 04    ; UART stat read port, lsb
 CONSTANT buffer_full      , 05    ; UART stat read port, lsb
-CONSTANT keys, 			  , 06    ; KEYPAD input
+CONSTANT keys 			  , 06    ; KEYPAD input
 
 ;================================================================
 ; Useful constant declarations...
@@ -376,7 +376,7 @@ buffer_full_call:
                 ; than 25 characters.
 
 led_echo:       LOAD     s0, s0            ; (nop)
-				input s0, switches
+				input s0, keys
 				xor s0, FF
 				output s0, leds
 				jump rs232_echo
@@ -397,7 +397,7 @@ rs232_echo:     LOAD     s0, s0            ; (nop)
 				jump led_echo
 
 send_back:		output s1, uart_data_tx
-				compare s5, 0
+				compare s5, 00
 				jump z, key_input
 				jump led_echo
 
@@ -429,21 +429,21 @@ key_input:
 
 key_1:
 				load s0, ascii_1
-				store s0, 00
+				output s0, uart_data_tx
 				jump main
 key_2:
 				load s0, ascii_2
-				store s0, 00
+				output s0, uart_data_tx
 				jump main
 key_3:
 				load s0, ascii_2
-				store s0, 00
+				output s0, uart_data_tx
 				jump main
 key_4:
 				load s0, ascii_3
-				store s0, 00
+				output s0, uart_data_tx
 				jump main
 key_5:
 				load s0, ascii_4
-				store s0, 00
+				output s0, uart_data_tx
 				jump main

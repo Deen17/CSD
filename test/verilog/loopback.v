@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module loopback( col, row, switches, leds, rs232_tx, rs232_rx, reset, clk );
+module loopback( col, row, leds, rs232_tx, rs232_rx, reset, clk ); //switches
 
 	// Top-level Inputs and Outputs
 	// These connect directly to FPGA pins via the pin map
@@ -28,7 +28,7 @@ module loopback( col, row, switches, leds, rs232_tx, rs232_rx, reset, clk );
 	input			reset;			// Remember: ACTIVE LOW!!!
 	input			clk;			// 100 MHz
 	// GPIO
-	input	 [7:0]	switches;
+	//input	 [7:0]	switches;
 	output	[7:0]	leds;
 	// RS232 Lines
 	input			rs232_rx;
@@ -162,7 +162,7 @@ assign col = upc_out;
 		end else begin
 			// Set pb input port to appropriate value
 			case(pb_port_id)
-				8'h00: pb_in_port <= switches;
+				//8'h00: pb_in_port <= switches;
 				8'h02: pb_in_port <= uart_rx_data;
 				8'h04: pb_in_port <= {7'b0000000,uart_data_present};
 				8'h05: pb_in_port <= {7'b0000000,uart_buffer_full};
