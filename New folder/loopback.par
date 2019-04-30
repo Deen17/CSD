@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-ABAAU9H::  Sun Apr 28 19:07:18 2019
+DESKTOP-ABAAU9H::  Mon Apr 29 23:59:39 2019
 
 par -w -intstyle ise -ol high -mt off loopback_map.ncd loopback.ncd
 loopback.pcf 
@@ -27,16 +27,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   157 out of  54,576    1%
-    Number used as Flip Flops:                 157
+  Number of Slice Registers:                   193 out of  54,576    1%
+    Number used as Flip Flops:                 193
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        197 out of  27,288    1%
-    Number used as logic:                      164 out of  27,288    1%
-      Number using O6 output only:              76
-      Number using O5 output only:               8
-      Number using O5 and O6:                   80
+  Number of Slice LUTs:                        248 out of  27,288    1%
+    Number used as logic:                      214 out of  27,288    1%
+      Number using O6 output only:              94
+      Number using O5 output only:              38
+      Number using O5 and O6:                   82
       Number used as ROM:                        0
     Number used as Memory:                      32 out of   6,408    1%
       Number used as Dual Port RAM:              8
@@ -51,18 +51,18 @@ Slice Logic Utilization:
         Number using O6 output only:             0
         Number using O5 output only:             0
         Number using O5 and O6:                  8
-    Number used exclusively as route-thrus:      1
+    Number used exclusively as route-thrus:      2
       Number with same-slice register load:      0
-      Number with same-slice carry load:         1
+      Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    63 out of   6,822    1%
-  Number of MUXCYs used:                        52 out of  13,644    1%
-  Number of LUT Flip Flop pairs used:          198
-    Number with an unused Flip Flop:            76 out of     198   38%
-    Number with an unused LUT:                   1 out of     198    1%
-    Number of fully used LUT-FF pairs:         121 out of     198   61%
+  Number of occupied Slices:                    73 out of   6,822    1%
+  Number of MUXCYs used:                        84 out of  13,644    1%
+  Number of LUT Flip Flop pairs used:          249
+    Number with an unused Flip Flop:            91 out of     249   36%
+    Number with an unused LUT:                   1 out of     249    1%
+    Number of fully used LUT-FF pairs:         157 out of     249   63%
     Number of slice register sites lost
       to control set restrictions:               0 out of  54,576    0%
 
@@ -73,8 +73,7 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        28 out of     320    8%
-    Number of LOCed IOBs:                       28 out of      28  100%
+  Number of bonded IOBs:                        27 out of     320    8%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         4 out of     116    3%
@@ -105,22 +104,19 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 4 secs 
-Finished initial Timing Analysis.  REAL time: 4 secs 
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
 
-WARNING:Par:288 - The signal col<2>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal col<3>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal row<3>_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 1725 unrouted;      REAL time: 5 secs 
+Phase  1  : 1914 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 1169 unrouted;      REAL time: 6 secs 
+Phase  2  : 1317 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 499 unrouted;      REAL time: 6 secs 
+Phase  3  : 536 unrouted;      REAL time: 6 secs 
 
-Phase  4  : 499 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  4  : 536 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
 Updating file: loopback.ncd with current fully routed design.
 
@@ -136,7 +132,7 @@ Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9
 
 Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 Total REAL time to Router completion: 9 secs 
-Total CPU time to Router completion: 8 secs 
+Total CPU time to Router completion: 9 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -156,8 +152,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.250ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.246ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.297ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.345ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -173,18 +169,16 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
-
 Total REAL time to PAR completion: 10 secs 
 Total CPU time to PAR completion: 9 secs 
 
-Peak Memory Usage:  4601 MB
+Peak Memory Usage:  4610 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 5
+Number of warning messages: 0
 Number of info messages: 2
 
 Writing design to file loopback.ncd

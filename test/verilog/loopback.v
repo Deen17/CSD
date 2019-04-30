@@ -34,7 +34,7 @@ module loopback( col, row, switches, leds, rs232_tx, rs232_rx, reset, clk );
 	input			rs232_rx;
 	output			rs232_tx;
 	//keypad
-	input [3:0] col;
+	output [3:0] col;
 	input [3:0] row;
 
 	// Wires and Register Declarations
