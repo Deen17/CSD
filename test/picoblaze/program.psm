@@ -9,6 +9,8 @@ CONSTANT uart_data_tx     , 03    ; UART transmit write port
 CONSTANT data_present     , 04    ; UART stat read port, lsb
 CONSTANT buffer_full      , 05    ; UART stat read port, lsb
 CONSTANT keys 			  , 06    ; KEYPAD input
+CONSTANT ram_in,			07	  ; RAM input
+CONSTANT ram_out, 			08	  ; ram output
 
 ;================================================================
 ; Useful constant declarations...
@@ -437,6 +439,14 @@ key_1:
 				output s0, uart_data_tx
 				load s0, ascii_LF
 				output s0, uart_data_tx
+				output s0, ram_in
+				load s0, s0
+				input s0, ram_out
+				output s0, uart_data_tx
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
 				jump loop
 key_2:
 				load s0, ascii_2
@@ -445,9 +455,25 @@ key_2:
 				output s0, uart_data_tx
 				load s0, ascii_LF
 				output s0, uart_data_tx
+				output s0, ram_in
+				load s0, s0
+				input s0, ram_out
+				output s0, uart_data_tx
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
 				jump loop
 key_3:
 				load s0, ascii_3
+				output s0, uart_data_tx
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
+				output s0, ram_in
+				load s0, s0
+				input s0, ram_out
 				output s0, uart_data_tx
 				load s0, ascii_CR
 				output s0, uart_data_tx
@@ -464,6 +490,14 @@ key_4:
 				jump loop
 key_5:
 				load s0, ascii_5
+				output s0, uart_data_tx
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
+				output s0, ram_in
+				load s0, s0
+				input s0, ram_out
 				output s0, uart_data_tx
 				load s0, ascii_CR
 				output s0, uart_data_tx
