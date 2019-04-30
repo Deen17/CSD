@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: loopback.prj
 
@@ -277,15 +277,15 @@ Elaborating module <program>.
 
 Elaborating module
 <RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0111001100001000011010111001100001100011100110000101101100101000010100100110100001001001000000000100001100001000001110010000000000110011110010000010101100001000001000110110000000011010100000000001000100000000000010010100100000000001100010000000000000000,INIT_01=256'b01111001100101000111010100110100011100011000010001101100100000000110100110010000011001011100100001100001101111000101110110001100010110011001010001010101010010000101000010100100010011001100100001001000001010000100010000110100010000011001010000111101100111,INIT_02=256'b01011100110000100101101001000000010110001100101001010110111010000101010011001010010100101101100001010000110010100100111010001000010011000110011001
-0010100001010001001000000110100100011011001010010001001100111001000010110000100100000011100110001111101110011,INIT_03=256'b011111001110100001111010110010100111100011011000011101101100101001110100100010000111001001000000011100000110100001101110000101000110110000011010011010101100101001101000110011100110011011000010011001001110011001100010111001100110000011001010010111101001101,INIT_04=256'b0110100001100011100110000101101100101000010100110011100001001011000010000100001110011000001110111001100000110011001010000010101001101000001000010000000000011011011000000001001101100000000010110000100000000001000001011100101000000000000010011111101100101,INIT_05=256'b01100000001000000001100001100000001000001010000000000000000000110010001100000001010000101110000110100010110011001010001010101101101000101000111010100010011011011000001001001101111000100010101011000010000001010010000111100110101000011100000101000001101,INIT_06=256'b0101110011100000001000000000000000111011000000010100000011011000101110110000000000000000011110001011
-0000101000000011101010000000001000001000000001000100000000100000000000011001010000000011111111100000110000000001011101011110000110001011011101001000000,INIT_07=256'b010111001000000110011010010111001000000110011001110111001000000110011001010111001000000110011001010111001000000110011000111110011000001011111000000000100111011010000001111101010,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_3
-5=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b010000001100100010100000001000101011010000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+0010100001010001001000000110100100011011001010010001001100111001000010110000100100000011100110001111101110011,INIT_03=256'b011111001110100001111010110010100111100011011000011101101100101001110100100010000111001001000000011100000110100001101110000101000110110000011010011010101100101001101000110011100110011011000010011001001110011001100010111001100110000011001010010111101001101,INIT_04=256'b0110100001100011100110000101101100101000010100110011100001001011000010000100001110011000001110111001100000110011001010000010101001101000001000010000000000011011011000000001001101100000000010110000100000000001000001011100101000000000000010011111101100101,INIT_05=256'b01100000001000000001100001100000001000001010000000000000000000110010001100000001010000101110000110100010110011001010001010101101101000101000111010100010011011011000001001001101111000100010101011000010000001010010000111100110101000011100000101000001101,INIT_06=256'b0101110100000000001000000000000000111010111000010100000000100000110110001010000001111000101110101110
+0000000100001010000000111010101000000010000010000000010001000000001000000000000110010010000000100000110000000001011101011110000110001011011101001000000,INIT_07=256'b0110100000011001101000000101100000011000010100000001100001101000000110011001100001011000000110000101000000011000011010000001100110010000010110000001100001010000000110000110100000011001100011101011100000100000001011111110100000100111101100000001111101111,INIT_08=256'b010110000000110101010000000000000101100000011000010100000001100001101000000110011010100001011000000110000101000000011,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=2
+56'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b01000000100000010000000100000000010000001001010001010000001000101011010000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_01=256'b0100010000001000,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
 
 Elaborating module
 <RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000011000000000000,INIT_01=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_02=256'b011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001
-0000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_03=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_04=256'b0100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000001000000001010000010100111100000001000,INIT_05=256'b0110100010001000010100001001000011101001010010010011000000001010000010100111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000,INIT_06=256'b1110100010010000111010000000101000001010100100001110100001001000000100001001000011101010
-011010000001000010010000111010101001000011101001010010010100100000110001001100000000000000010000011010000011100001001000000000000001000000000111000100001011000011100000,INIT_07=256'b010000011010000000100000010000011010000000100000010000011010000000100000010000011010000000100000010000011010000000100010010000111010001001000011101000100100001110100010010000,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34
-=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b0110110110110110101010101000100110111010000001100010110100100000101010101010101010101010101010101010101010101010101001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+0000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_03=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_04=256'b0100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000001000000001010000010100111100000001000,INIT_05=256'b0110100010001000010100001001000011101001010010010011000000001010000010100111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000,INIT_06=256'b1110100010010000111010000000101000001010100100001110100001101000010010000001000001101000
+000100001001000011101010100100001110101010010000111010010100100101001000001100010011000000000000000100000110100001001000000000000001000000000111000100001011000011100000,INIT_07=256'b0100001101000000010000001000001101000000010000110100000001000011010000000100000010000011010000000100001101000000010000110100000001000000100000110100000001000011010000000100001101000000010000001000010010000111010001001000011101000100100001110100010010000,INIT_08=256'b0100000110100100001001000000000001000001101000000010000110100000001000011010000000100000010000011010000000100001101000,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_2
+7=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b0101101010110101011010101101010101000101011110101000000110010110100100000101010101010101010101010101010101010101010101010101001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000,INITP_01=256'b0110011010101101,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
 
 Elaborating module
 <RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0,INIT_01=256'b0,INIT_02=256'b0,INIT_03=256'b0,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT
@@ -297,15 +297,14 @@ _2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=2
 
 Synthesizing Unit <loopback>.
     Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v".
-WARNING:Xst:647 - Input <row<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v" line 124: Output port <interrupt_ack> of the instance <CPU> is unconnected or connected to loadless signal.
-    Found 1-bit register for signal <read_from_uart>.
     Found 8-bit register for signal <pb_in_port>.
-    Found 3-bit register for signal <keyflag>.
-    Found 8-bit 8-to-1 multiplexer for signal <_n0094> created at line 167.
+    Found 1-bit register for signal <read_from_uart>.
+    Found 8-bit register for signal <keyflag>.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0100> created at line 167.
     Summary:
-	inferred  12 D-type flip-flop(s).
-	inferred   8 Multiplexer(s).
+	inferred  17 D-type flip-flop(s).
+	inferred  15 Multiplexer(s).
 Unit <loopback> synthesized.
 
 Synthesizing Unit <led_driver_wrapper>.
@@ -700,13 +699,11 @@ Macro Statistics
 # Registers                                            : 8
  1-bit register                                        : 2
  10-bit register                                       : 1
- 3-bit register                                        : 1
  32-bit register                                       : 1
  4-bit register                                        : 1
- 8-bit register                                        : 2
-# Multiplexers                                         : 8
- 3-bit 2-to-1 multiplexer                              : 2
- 8-bit 2-to-1 multiplexer                              : 5
+ 8-bit register                                        : 3
+# Multiplexers                                         : 15
+ 8-bit 2-to-1 multiplexer                              : 14
  8-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -731,11 +728,10 @@ Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 156
- Flip-Flops                                            : 156
-# Multiplexers                                         : 8
- 3-bit 2-to-1 multiplexer                              : 2
- 8-bit 2-to-1 multiplexer                              : 5
+# Registers                                            : 161
+ Flip-Flops                                            : 161
+# Multiplexers                                         : 15
+ 8-bit 2-to-1 multiplexer                              : 14
  8-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -743,6 +739,10 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <keyflag_4> (without init value) has a constant value of 0 in block <loopback>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <keyflag_5> (without init value) has a constant value of 0 in block <loopback>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <keyflag_6> (without init value) has a constant value of 0 in block <loopback>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <keyflag_7> (without init value) has a constant value of 0 in block <loopback>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <uart_tx6> ...
 
@@ -787,8 +787,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 198
- Flip-Flops                                            : 198
+# Registers                                            : 199
+ Flip-Flops                                            : 199
 
 =========================================================================
 WARNING:Xst:1293 - FF/Latch <CPU/pblaze_cpu/sync_interrupt_flop> has a constant value of 0 in block <loopback>. This FF/Latch will be trimmed during the optimization process.
@@ -815,26 +815,25 @@ Top Level Output File Name         : loopback.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 354
+# BELS                             : 355
 #      GND                         : 1
-#      INV                         : 3
+#      INV                         : 2
 #      LUT1                        : 40
-#      LUT2                        : 2
-#      LUT3                        : 6
+#      LUT2                        : 1
+#      LUT3                        : 5
 #      LUT4                        : 5
 #      LUT5                        : 19
-#      LUT6                        : 60
+#      LUT6                        : 65
 #      LUT6_2                      : 78
 #      MUXCY                       : 69
-#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 69
-# FlipFlops/Latches                : 198
+# FlipFlops/Latches                : 199
 #      FD                          : 87
 #      FDC                         : 9
 #      FDCE                        : 8
 #      FDE                         : 4
-#      FDR                         : 76
+#      FDR                         : 77
 #      FDRE                        : 14
 # RAMS                             : 10
 #      RAM32M                      : 4
@@ -844,8 +843,8 @@ Primitive and Black Box Usage:
 #      SRL16E                      : 16
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 26
-#      IBUF                        : 13
+# IO Buffers                       : 27
+#      IBUF                        : 14
 #      OBUF                        : 13
 
 Device utilization summary:
@@ -855,23 +854,23 @@ Selected Device : 6slx45csg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             198  out of  54576     0%  
- Number of Slice LUTs:                  253  out of  27288     0%  
-    Number used as Logic:               213  out of  27288     0%  
+ Number of Slice Registers:             199  out of  54576     0%  
+ Number of Slice LUTs:                  255  out of  27288     0%  
+    Number used as Logic:               215  out of  27288     0%  
     Number used as Memory:               40  out of   6408     0%  
        Number used as RAM:               24
        Number used as SRL:               16
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    311
-   Number with an unused Flip Flop:     113  out of    311    36%  
-   Number with an unused LUT:            58  out of    311    18%  
-   Number of fully used LUT-FF pairs:   140  out of    311    45%  
+ Number of LUT Flip Flop pairs used:    314
+   Number with an unused Flip Flop:     115  out of    314    36%  
+   Number with an unused LUT:            59  out of    314    18%  
+   Number of fully used LUT-FF pairs:   140  out of    314    44%  
    Number of unique control sets:        14
 
 IO Utilization: 
  Number of IOs:                          28
- Number of bonded IOBs:                  27  out of    320     8%  
+ Number of bonded IOBs:                  28  out of    320     8%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                4  out of    116     3%  
@@ -899,7 +898,7 @@ Clock Information:
 -----------------------------------+-----------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)             | Load  |
 -----------------------------------+-----------------------------------+-------+
-clk                                | BUFGP                             | 224   |
+clk                                | BUFGP                             | 225   |
 pb_interrupt                       | NONE(CPU/pblaze_rom/kcpsm6_rom_hh)| 4     |
 -----------------------------------+-----------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -912,9 +911,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 9.644ns (Maximum Frequency: 103.687MHz)
-   Minimum input arrival time before clock: 4.541ns
-   Maximum output required time after clock: 3.847ns
+   Minimum period: 9.672ns (Maximum Frequency: 103.396MHz)
+   Minimum input arrival time before clock: 4.802ns
+   Maximum output required time after clock: 3.926ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -923,10 +922,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.644ns (frequency: 103.687MHz)
-  Total number of paths / destination ports: 36526 / 523
+  Clock period: 9.672ns (frequency: 103.396MHz)
+  Total number of paths / destination ports: 36497 / 525
 -------------------------------------------------------------------------
-Delay:               9.644ns (Levels of Logic = 6)
+Delay:               9.672ns (Levels of Logic = 6)
   Source:            CPU/pblaze_rom/kcpsm6_rom_lh (RAM)
   Destination:       UART/transmitter/pointer0_flop (FF)
   Source Clock:      clk rising
@@ -938,15 +937,15 @@ Delay:               9.644ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      RAMB16BWER:CLKA->DOA3    1   1.850   0.579  CPU/pblaze_rom/kcpsm6_rom_lh (CPU/pblaze_rom/n0015<3>)
      LUT6_2:I0->O5        16   0.568   1.004  CPU/pblaze_rom/s6_4k_mux12_lut (CPU/instruction<12>)
-     LUT6_2:I4->O6        11   0.568   1.111  CPU/pblaze_cpu/data_path_loop[4].output_data.sy_kk_mux_lut (pb_port_id<5>)
-     LUT5:I2->O            9   0.205   0.830  pb_read_strobe_pb_port_id[7]_AND_24_o11 (pb_read_strobe_pb_port_id[7]_AND_24_o1)
+     LUT6_2:I4->O5        10   0.568   1.085  CPU/pblaze_cpu/data_path_loop[4].output_data.sy_kk_mux_lut (pb_port_id<4>)
+     LUT5:I2->O           11   0.205   0.883  _n0101<7>1 (_n0101)
      LUT5:I4->O           12   0.205   0.908  write_to_uart1 (write_to_uart)
      LUT6_2:I2->O5         1   0.568   0.579  UART/transmitter/data_present_lut (UART/transmitter/en_pointer)
      LUT6_2:I2->O6         1   0.568   0.000  UART/transmitter/pointer01_lut (UART/transmitter/pointer_value<1>)
      FDR:D                     0.102          UART/transmitter/pointer1_flop
     ----------------------------------------
-    Total                      9.644ns (4.634ns logic, 5.010ns route)
-                                       (48.0% logic, 52.0% route)
+    Total                      9.672ns (4.634ns logic, 5.038ns route)
+                                       (47.9% logic, 52.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'pb_interrupt'
@@ -971,32 +970,29 @@ Delay:               2.729ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 112 / 92
+  Total number of paths / destination ports: 132 / 94
 -------------------------------------------------------------------------
-Offset:              4.541ns (Levels of Logic = 5)
-  Source:            row<1> (PAD)
-  Destination:       pb_in_port_0 (FF)
+Offset:              4.802ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       upc/count_31 (FF)
   Destination Clock: clk rising
 
-  Data Path: row<1> to pb_in_port_0
+  Data Path: reset to upc/count_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   1.222   1.077  row_1_IBUF (row_1_IBUF)
-     LUT4:I0->O            1   0.203   0.000  Mmux_pb_port_id[7]_switches[7]_select_20_OUT12_G (N11)
-     MUXF7:I1->O           1   0.140   0.808  Mmux_pb_port_id[7]_switches[7]_select_20_OUT12 (Mmux_pb_port_id[7]_switches[7]_select_20_OUT11)
-     LUT6:I3->O            1   0.205   0.580  Mmux_pb_port_id[7]_switches[7]_select_20_OUT13 (Mmux_pb_port_id[7]_switches[7]_select_20_OUT12)
-     LUT6:I5->O            1   0.205   0.000  Mmux_pb_port_id[7]_switches[7]_select_20_OUT14 (pb_port_id[7]_switches[7]_select_20_OUT<0>)
-     FDC:D                     0.102          pb_in_port_0
+     IBUF:I->O            32   1.222   1.656  reset_IBUF (reset_IBUF)
+     LUT6:I0->O           32   0.203   1.291  upc/Mcount_count_val321 (upc/Mcount_count_val)
+     FDR:R                     0.430          upc/count_0
     ----------------------------------------
-    Total                      4.541ns (2.077ns logic, 2.464ns route)
-                                       (45.7% logic, 54.3% route)
+    Total                      4.802ns (1.855ns logic, 2.947ns route)
+                                       (38.6% logic, 61.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 13 / 13
 -------------------------------------------------------------------------
-Offset:              3.847ns (Levels of Logic = 1)
+Offset:              3.926ns (Levels of Logic = 1)
   Source:            upc/out_0 (FF)
   Destination:       col<0> (PAD)
   Source Clock:      clk rising
@@ -1005,11 +1001,11 @@ Offset:              3.847ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              9   0.447   0.829  upc/out_0 (upc/out_0)
+     FDE:C->Q             12   0.447   0.908  upc/out_0 (upc/out_0)
      OBUF:I->O                 2.571          col_0_OBUF (col<0>)
     ----------------------------------------
-    Total                      3.847ns (3.018ns logic, 0.829ns route)
-                                       (78.5% logic, 21.5% route)
+    Total                      3.926ns (3.018ns logic, 0.908ns route)
+                                       (76.9% logic, 23.1% route)
 
 =========================================================================
 
@@ -1021,7 +1017,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    9.644|         |         |         |
+clk            |    9.672|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock pb_interrupt
@@ -1035,14 +1031,14 @@ pb_interrupt   |    2.729|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.04 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.81 secs
  
 --> 
 
 Total memory usage is 4538796 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   24 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 

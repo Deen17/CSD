@@ -377,7 +377,7 @@ buffer_full_call:
 
 led_echo:       LOAD     s0, s0            ; (nop)
 				input s0, keys
-				xor s0, FF
+				; xor s0, FF
 				output s0, leds
 				jump rs232_echo
 
@@ -394,11 +394,12 @@ rs232_echo:     LOAD     s0, s0            ; (nop)
 				jump z, send_back
 				compare s5, 01
 				jump z, rest
-				jump led_echo
-
-send_back:		output s1, uart_data_tx
 				compare s5, 00
 				jump z, key_input
+				jump led_echo  ;   			here is the loop
+
+send_back:		
+				output s1, uart_data_tx
 				jump led_echo
 
                 ; Code 3
@@ -412,6 +413,7 @@ send_back:		output s1, uart_data_tx
 
 key_input:
 				input s0, keys
+				output s0, leds
 				compare s0, 0A
 				jump z, key_input
 				load s4, 01
@@ -426,24 +428,51 @@ key_input:
 				jump z, key_4
 				compare s0, 05
 				jump z, key_5
+				jump key_input
 
 key_1:
 				load s0, ascii_1
 				output s0, uart_data_tx
-				jump main
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
+				jump loop
 key_2:
 				load s0, ascii_2
 				output s0, uart_data_tx
-				jump main
-key_3:
-				load s0, ascii_2
+				load s0, ascii_CR
 				output s0, uart_data_tx
-				jump main
-key_4:
+				load s0, ascii_LF
+				output s0, uart_data_tx
+				jump loop
+key_3:
 				load s0, ascii_3
 				output s0, uart_data_tx
-				jump main
-key_5:
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
+				jump loop
+key_4:
 				load s0, ascii_4
 				output s0, uart_data_tx
-				jump main
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
+				jump loop
+key_5:
+				load s0, ascii_5
+				output s0, uart_data_tx
+				load s0, ascii_CR
+				output s0, uart_data_tx
+				load s0, ascii_LF
+				output s0, uart_data_tx
+				jump loop
+
+loop:
+				load s0, s0
+				load s2, aa
+				output s2, leds
+				jump loop

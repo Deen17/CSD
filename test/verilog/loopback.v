@@ -69,7 +69,7 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 	// LED Driver and control logic
 	//
 	// LED driver expects ACTIVE-HIGH reset
-	assign led_reset = ~reset;
+	assign led_reset = reset;
 	// LED driver instantiation
 	led_driver_wrapper led_driver (
 		.led_value(pb_out_port),
@@ -93,7 +93,7 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 	// UART and control logic
 	//
 	// UART expects ACTIVE-HIGH reset	
-	assign uart_reset =  ~reset;
+	assign uart_reset =  reset;
 	// UART instantiation
 	//
 	// Within the UART Module (rs232_uart.v), make sure you fill in the
@@ -114,7 +114,7 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 	// PicoBlaze and control logic
 	//
 	// PB expects ACTIVE-HIGH reset
-	assign pb_reset = ~reset;
+	assign pb_reset = reset;
 	// Disable interrupt by assigning 0 to interrupt
 	assign pb_interrupt = 1'b0;
 	// PB CPU instantiation
@@ -156,7 +156,7 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 	// This process block gets the value of the requested input port device
 	// and passes it to PBs in_port. When PB is not requestng data from
 	// a valid input port, set the input to static 0.
-	reg [2:0] keyflag;
+	reg [7:0] keyflag;
 	always @(posedge clk or posedge pb_reset)
 	begin
 		if(pb_reset) begin
@@ -169,27 +169,28 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 				8'h02: pb_in_port <= uart_rx_data; //waas uart_data_rx
 				8'h04: pb_in_port <= {7'b0000000,uart_data_present};
 				8'h05: pb_in_port <= {7'b0000000,uart_buffer_full};
-				8'h06:	begin
-							if(keyflag == 3'd1 && col[0] && row[0]) begin
+				8'h06: pb_in_port <= keyflag;
+				/*	begin
+							if(!col[0] && !row[0]) begin
 								pb_in_port <= 8'h01;
 							end
-							else if(keyflag == 3'd2 && col[0] && row[1]) begin
+							else if(!col[1] && !row[0]) begin
 								pb_in_port <= 8'h02;
 							end
-							else if(keyflag == 3'd3 && col[0] && row[2]) begin
+							else if(!col[2] && !row[0]) begin
 								pb_in_port <= 8'd03;
 							end
-							else if(keyflag == 3'd4 && col[1] && row[0]) begin
+							else if(!col[0] && !row[1]) begin
 								pb_in_port <= 8'h04;
 							end
-							else if(keyflag == 3'd5 && col[1] && row[1]) begin
+							else if(!col[1] && !row[1]) begin
 								pb_in_port <= 8'h05;
 							end
 							else begin
 								pb_in_port <= 8'h0a;
 							end
 						end
-				default: pb_in_port <= 8'h0a;
+*/				default: pb_in_port <= 8'h0a;
 			endcase
 			// Set up acknowledge/enable signals.
 			//
@@ -202,20 +203,41 @@ module loopback( switches, leds, rs232_tx, rs232_rx, reset, clk, col, row );
 		end
 	end
 	
-	always @(posedge clk)
-	begin
-		if(!col[0]&& !row[0] )
-			keyflag <= 3'd1;
-		else if (!col[0]&& !row[1] )
-			keyflag <= 3'd2;
-		else if (!col[0]&& !row[2] )
-			keyflag <= 3'd3;
-		else if (!col[1]&& !row[0] )
-			keyflag <= 3'd4;
-		else if (!col[1]&& !row[1] )
-			keyflag <= 3'd5;
-		else
-			keyflag <= 3'd0;
-	end
+always @(posedge clk)
+begin
+	if(!col[0]&& !row[0])
+		keyflag <= 8'h01;
+	else if(!col[1]&& !row[0])
+		keyflag <= 8'h02; 
+	else if(!col[2]&& !row[0])
+		keyflag <= 8'h03;
+	else if(!col[0]&& !row[1])
+		keyflag <= 8'h04;
+	else if(!col[1]&& !row[1])
+		keyflag <= 8'h05;
+	else if(!col[2]&& !row[1])
+		keyflag <= 8'h06;
+	else if(!col[0]&& !row[2])
+		keyflag <= 8'h07;
+	else if(!col[1]&& !row[2])
+		keyflag <= 8'h08;
+	else if(!col[2]&& !row[2])
+		keyflag <= 8'h09;
+	else if(!col[0]&& !row[3])
+		keyflag <= 8'h00;
+	else if(!col[1]&& !row[3])
+		keyflag <= 8'h0f;
+	else if(!col[2]&& !row[3])
+		keyflag <= 8'h0e;
+	else if(!col[3]&& !row[0])
+		keyflag <= 8'h0a;
+	else if(!col[3]&& !row[1])
+		keyflag <= 8'h0b;
+	else if(!col[3]&& !row[2])
+		keyflag <= 8'h0c;
+	else if (!col[3]&&!row[3])
+		keyflag <= 8'h0d;
+	else keyflag <= 8'h00;
+end
 
 endmodule

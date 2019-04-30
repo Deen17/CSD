@@ -356,7 +356,7 @@ buffer_full_call:
                   ; than 25 characters.
         led_echo: LOAD s0, s0                 ; (nop)
                   INPUT s0, keys
-                  XOR s0, FF
+                  ; xor s0, FF
                   OUTPUT s0, leds
                   JUMP rs232_echo
                   ; Code 2
@@ -371,10 +371,11 @@ buffer_full_call:
                   JUMP Z, send_back
                   COMPARE s5, 01
                   JUMP Z, rest
-                  JUMP led_echo
-       send_back: OUTPUT s1, uart_data_tx
                   COMPARE s5, 00
                   JUMP Z, key_input
+                  JUMP led_echo               ;      here is the loop
+       send_back: 
+                  OUTPUT s1, uart_data_tx
                   JUMP led_echo
                   ; Code 3
                   ; Write code to check if a byte has been
@@ -383,6 +384,7 @@ buffer_full_call:
                   ;JUMP     led_echo          ; endless loop
        key_input: 
                   INPUT s0, keys
+                  OUTPUT s0, leds
                   COMPARE s0, 0A
                   JUMP Z, key_input
                   LOAD s4, 01
@@ -397,23 +399,49 @@ buffer_full_call:
                   JUMP Z, key_4
                   COMPARE s0, 05
                   JUMP Z, key_5
+                  JUMP key_input
            key_1: 
                   LOAD s0, ascii_1
                   OUTPUT s0, uart_data_tx
-                  JUMP main
+                  LOAD s0, ascii_CR
+                  OUTPUT s0, uart_data_tx
+                  LOAD s0, ascii_LF
+                  OUTPUT s0, uart_data_tx
+                  JUMP loop
            key_2: 
                   LOAD s0, ascii_2
                   OUTPUT s0, uart_data_tx
-                  JUMP main
-           key_3: 
-                  LOAD s0, ascii_2
+                  LOAD s0, ascii_CR
                   OUTPUT s0, uart_data_tx
-                  JUMP main
-           key_4: 
+                  LOAD s0, ascii_LF
+                  OUTPUT s0, uart_data_tx
+                  JUMP loop
+           key_3: 
                   LOAD s0, ascii_3
                   OUTPUT s0, uart_data_tx
-                  JUMP main
-           key_5: 
+                  LOAD s0, ascii_CR
+                  OUTPUT s0, uart_data_tx
+                  LOAD s0, ascii_LF
+                  OUTPUT s0, uart_data_tx
+                  JUMP loop
+           key_4: 
                   LOAD s0, ascii_4
                   OUTPUT s0, uart_data_tx
-                  JUMP main
+                  LOAD s0, ascii_CR
+                  OUTPUT s0, uart_data_tx
+                  LOAD s0, ascii_LF
+                  OUTPUT s0, uart_data_tx
+                  JUMP loop
+           key_5: 
+                  LOAD s0, ascii_5
+                  OUTPUT s0, uart_data_tx
+                  LOAD s0, ascii_CR
+                  OUTPUT s0, uart_data_tx
+                  LOAD s0, ascii_LF
+                  OUTPUT s0, uart_data_tx
+                  JUMP loop
+            loop: 
+                  LOAD s0, s0
+                  LOAD s2, AA
+                  OUTPUT s2, leds
+                  JUMP loop
