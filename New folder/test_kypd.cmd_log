@@ -1,0 +1,83 @@
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../test/ipcore_dir -nt timestamp -uc C:/Users/Adil/Documents/CSD/test/Test/loopback.ucf -p xc6slx45-csg484-3 "test_kypd.ngc" test_kypd.ngd  
+map -intstyle ise -p xc6slx45-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_kypd_map.ncd test_kypd.ngd test_kypd.pcf 
+par -w -intstyle ise -ol high -mt off test_kypd_map.ncd test_kypd.ncd test_kypd.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_kypd.twx test_kypd.ncd -o test_kypd.twr test_kypd.pcf 
+bitgen -intstyle ise -f test_kypd.ut test_kypd.ncd 
+xst -intstyle ise -ifn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.xst" -ofn "C:/Users/Adil/Documents/CSD/New folder/test_kypd.syr" 

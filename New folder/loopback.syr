@@ -1,0 +1,790 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: loopback.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "loopback.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "loopback"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg484
+
+---- Source Options
+Top Module Name                    : loopback
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../test/ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\uart_tx6.v" into library work
+Parsing module <uart_tx6>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\uart_rx6.v" into library work
+Parsing module <uart_rx6>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\kcpsm6.v" into library work
+Parsing module <kcpsm6>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\picoblaze\program.v" into library work
+Parsing module <program>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\rs232_uart.v" into library work
+Parsing module <rs232_uart>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\picoblaze.v" into library work
+Parsing module <picoblaze>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\led_driver.v" into library work
+Parsing module <led_driver_wrapper>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\up_counter.v" into library work
+Parsing module <up_counter>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v" into library work
+Parsing module <loopback>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\infrastructure.v" into library work
+Parsing module <infrastructure>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_controller.v" into library work
+Parsing module <iodrp_controller>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_mcb_controller.v" into library work
+Parsing module <iodrp_mcb_controller>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_raw_wrapper.v" into library work
+Parsing module <mcb_raw_wrapper>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration.v" into library work
+Parsing module <mcb_soft_calibration>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration_top.v" into library work
+Parsing module <mcb_soft_calibration_top>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_ui_top.v" into library work
+Parsing module <mcb_ui_top>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\ipcore_dir\ram_interface\user_design\rtl\memc_wrapper.v" into library work
+Parsing module <memc_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <loopback>.
+
+Elaborating module <led_driver_wrapper>.
+
+Elaborating module <up_counter>.
+
+Elaborating module <rs232_uart>.
+WARNING:HDLCompiler:413 - "C:\Users\Adil\Documents\CSD\test\verilog\rs232_uart.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <uart_tx6>.
+
+Elaborating module <SRL16E(INIT=16'b0)>.
+
+Elaborating module <FD>.
+
+Elaborating module <LUT6(INIT=64'b1111111100000000111111100000000011111111100000001111111100000000)>.
+
+Elaborating module <FDR>.
+
+Elaborating module <LUT6(INIT=64'b1111000011110000111000011110000011111000011110001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110010010000011000001100110010101010010100000101000010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111010011111100111101001111110000000100000000000000010011000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01000000000000000010000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100111110101010110011000000111100001111111111111111111111111111)>.
+
+Elaborating module <LUT6(INIT=64'b1000010101010000000000000000000010101010101010101010101010101010)>.
+
+Elaborating module <LUT6(INIT=64'b010011001100001000000000000000011001100110011001100110011001100)>.
+
+Elaborating module <LUT6(INIT=64'b1000100001110000000000000000000011110000111100001111000011110000)>.
+
+Elaborating module <LUT6(INIT=64'b1000011101000100000000000000000011111111000000001111111100000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110110000000000000000000000000001011010000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111111110000000111111110000000001111000011110001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000000000000)>.
+
+Elaborating module <uart_rx6>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110011110000000000000000000010101010110011000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100101011111111110010101111111100000000000000001100000011000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111000011001100111111111111111111001100101010101111111111111111)>.
+
+Elaborating module <LUT6(INIT=64'b010111100101111101011111010111100000000000000001111111100000000)>.
+
+Elaborating module <LUT6(INIT=64'b010001000100010000000001111000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110110011001100000000000000000001011010101010100000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000010001000100010001000100010001000)>.
+
+Elaborating module <picoblaze>.
+
+Elaborating module <kcpsm6>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111111101010101010100000000000000000000111011101110)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000011000000000000101100000000110001000000000001001100)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000000000000000000000100000000000)>.
+
+Elaborating module <LUT6(INIT=64'b01100101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110000110011111111110000000010000000100000001000000010000000)>.
+
+Elaborating module <LUT6(INIT=64'b0101101000111100111111111111111100000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011101110111000000100111011100000000000000000000001000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111100000000000000000000000000000010001111111111)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111111111111111111100000000000001000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111000100000000000000000000000000000010000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01111001010000000000000000000000100001000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011100001000000000000000000000000000000000000000111100000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1101000000000000000000000000000000000010000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01001111110011111100000000000100001111011111001110)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100000011001100000000000000000010100000101010100000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1000000000000000000000000000000000100000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0100000000000000000000000000000000000001000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010000000000000100000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1010110010101100111111110000000011111111000000001111111100000000)>.
+
+Elaborating module <XORCY>.
+
+Elaborating module <LUT6_2(INIT=64'b010000111011110000000000000000000)>.
+
+Elaborating module <MUXCY>.
+
+Elaborating module <LUT6(INIT=64'b0110100110010110100101100110100110010110011010010110100110010110)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111101010101100110011110000111100001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b011001100110011101010101100110011110000101010100000000000000000)>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <LUT6_2(INIT=64'b1010001010000000000000000000000000000000111100000000000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111101111111111000000000000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111100110011110011000000111100000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111111001100110011001111000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000000000000011001100110011001111000000000000)>.
+
+Elaborating module <RAM32M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+
+Elaborating module <LUT6_2(INIT=64'b010101001010011010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0101010001001010010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100101101001011011101000101011001100110011000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1011111110111100100011111000110010110011101100001000001110000000)>.
+
+Elaborating module <RAM64M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+
+Elaborating module <program>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0111001100001000011010111001100001100011100110000101101100101000010100100110100001001001000000000100001100001000001110010000000000110011110010000010101100001000001000110110000000011010100000000001000100000000000010010100100000000001100010000000000000000,INIT_01=256'b01111001100101000111010100110100011100011000010001101100100000000110100110010000011001011100100001100001101111000101110110001100010110011001010001010101010010000101000010100100010011001100100001001000001010000100010000110100010000011001010000111101100111,INIT_02=256'b01011100110000100101101001000000010110001100101001010110111010000101010011001010010100101101100001010000110010100100111010001000010011000110011001
+0010100001010001001000000110100100011011001010010001001100111001000010110000100100000011100110001111101110011,INIT_03=256'b011111001110100001111010110010100111100011011000011101101100101001110100100010000111001001000000011100000110100001101110000101000110110000011010011010101100101001101000110011100110011011000010011001001110011001100010111001100110000011001010010111101001101,INIT_04=256'b0110100001100011100110000101101100101000010100110011100001001011000010000100001110011000001110111001100000110011001010000010101001101000001000010000000000011011011000000001001101100000000010110000100000000001000001011100101000000000000010011111101100101,INIT_05=256'b01100000001000000001100001100000001000001010000000000000000000110010001100000001010000101110000110100010110011001010001010101101101000101000111010100010011011011000001001001101111000100010101011000010000001010010000111100110101000011100000101000001101,INIT_06=256'b1110100000000001000000000000000111011000000010100000000100000110110001011101100000000000000000111100
+010110000101000000011101010000000001000001000000001000100000000100000000000011001010000000011111111100000110000000001011101011110000110001011011101001000000,INIT_07=256'b01101100000000011000000011101100000000011000000011101100000000011000000011101100000000011000000011101100000000011000000011111010000000101111100010000010011101110000000111110101100000010,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=
+256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b0100000001100100010100000001000101011010000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000011000000000000,INIT_01=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_02=256'b011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001
+0000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_03=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_04=256'b0100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000001000000001010000010100111100000001000,INIT_05=256'b0110100010001000010100001001000011101001010010010011000000001010000010100111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000,INIT_06=256'b1001000011101000000010100000101010010000111010000110100001001000000100001001000011101010
+011010000001000010010000111010101001000011101001010010010100100000110001001100000000000000010000011010000011100001001000000000000001000000000111000100001011000011100000,INIT_07=256'b01000001101000011010000001000001101000011010000001000001101000011010000001000001101000011010000001000001101000011010001001000011101000100100001110100010010000111010001001000011101000,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0
+,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b01111111111111111010101010001010110111010000001100010110100100000101010101010101010101010101010101010101010101010101001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0,INIT_01=256'b0,INIT_02=256'b0,INIT_03=256'b0,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT
+_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b0,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <loopback>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v".
+WARNING:Xst:647 - Input <col<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <row<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v" line 122: Output port <interrupt_ack> of the instance <CPU> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <read_from_uart>.
+    Found 8-bit register for signal <pb_in_port>.
+    Found 3-bit register for signal <keyflag>.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0095> created at line 164.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <loopback> synthesized.
+
+Synthesizing Unit <led_driver_wrapper>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\led_driver.v".
+    Found 8-bit register for signal <leds>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <led_driver_wrapper> synthesized.
+
+Synthesizing Unit <up_counter>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\Test\up_counter.v".
+    Found 4-bit register for signal <out>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_3_o_add_2_OUT> created at line 32.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+Unit <up_counter> synthesized.
+
+Synthesizing Unit <rs232_uart>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\rs232_uart.v".
+        MAX_BAUD_COUNT = 651
+INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\rs232_uart.v" line 79: Output port <buffer_data_present> of the instance <transmitter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\rs232_uart.v" line 79: Output port <buffer_half_full> of the instance <transmitter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\rs232_uart.v" line 92: Output port <buffer_half_full> of the instance <receiver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\rs232_uart.v" line 92: Output port <buffer_full> of the instance <receiver> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <en_16_x_baud>.
+    Found 10-bit register for signal <baud_count>.
+    Found 10-bit adder for signal <baud_count[9]_GND_4_o_add_2_OUT> created at line 72.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <rs232_uart> synthesized.
+
+Synthesizing Unit <uart_tx6>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\uart_tx6.v".
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[0].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[0].storage_flop>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[1].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[1].storage_flop>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[2].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[2].storage_flop>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[3].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[3].storage_flop>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[4].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[4].storage_flop>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[5].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[5].storage_flop>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[6].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[6].storage_flop>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[7].storage_srl>.
+    Set property "HBLKNM = UART_TX6_5" for instance <data_width_loop[7].storage_flop>.
+    Set property "HBLKNM = UART_TX6_1" for instance <pointer3_lut>.
+    Set property "HBLKNM = UART_TX6_1" for instance <pointer3_flop>.
+    Set property "HBLKNM = UART_TX6_1" for instance <pointer2_lut>.
+    Set property "HBLKNM = UART_TX6_1" for instance <pointer2_flop>.
+    Set property "HBLKNM = UART_TX6_1" for instance <pointer01_lut>.
+    Set property "HBLKNM = UART_TX6_1" for instance <pointer1_flop>.
+    Set property "HBLKNM = UART_TX6_1" for instance <pointer0_flop>.
+    Set property "HBLKNM = UART_TX6_1" for instance <data_present_lut>.
+    Set property "HBLKNM = UART_TX6_1" for instance <data_present_flop>.
+    Set property "HBLKNM = UART_TX6_4" for instance <full_lut>.
+    Set property "HBLKNM = UART_TX6_4" for instance <lsb_data_lut>.
+    Set property "HBLKNM = UART_TX6_4" for instance <msb_data_lut>.
+    Set property "HBLKNM = UART_TX6_4" for instance <serial_lut>.
+    Set property "HBLKNM = UART_TX6_4" for instance <serial_flop>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm0_lut>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm0_flop>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm1_lut>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm1_flop>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm2_lut>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm2_flop>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm3_lut>.
+    Set property "HBLKNM = UART_TX6_2" for instance <sm3_flop>.
+    Set property "HBLKNM = UART_TX6_3" for instance <div01_lut>.
+    Set property "HBLKNM = UART_TX6_3" for instance <div0_flop>.
+    Set property "HBLKNM = UART_TX6_3" for instance <div1_flop>.
+    Set property "HBLKNM = UART_TX6_3" for instance <div23_lut>.
+    Set property "HBLKNM = UART_TX6_3" for instance <div2_flop>.
+    Set property "HBLKNM = UART_TX6_3" for instance <div3_flop>.
+    Set property "HBLKNM = UART_TX6_3" for instance <next_lut>.
+    Set property "HBLKNM = UART_TX6_3" for instance <next_flop>.
+    Set property "HBLKNM = UART_TX6_3" for instance <read_flop>.
+    Summary:
+	no macro.
+Unit <uart_tx6> synthesized.
+
+Synthesizing Unit <uart_rx6>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\uart_rx6.v".
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[0].storage_srl>.
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[1].storage_srl>.
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[2].storage_srl>.
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[3].storage_srl>.
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[4].storage_srl>.
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[5].storage_srl>.
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[6].storage_srl>.
+    Set property "HBLKNM = UART_RX6_5" for instance <data_width_loop[7].storage_srl>.
+    Set property "HBLKNM = UART_RX6_1" for instance <pointer3_lut>.
+    Set property "HBLKNM = UART_RX6_1" for instance <pointer3_flop>.
+    Set property "HBLKNM = UART_RX6_1" for instance <pointer2_lut>.
+    Set property "HBLKNM = UART_RX6_1" for instance <pointer2_flop>.
+    Set property "HBLKNM = UART_RX6_1" for instance <pointer01_lut>.
+    Set property "HBLKNM = UART_RX6_1" for instance <pointer1_flop>.
+    Set property "HBLKNM = UART_RX6_1" for instance <pointer0_flop>.
+    Set property "HBLKNM = UART_RX6_1" for instance <data_present_lut>.
+    Set property "HBLKNM = UART_RX6_1" for instance <data_present_flop>.
+    Set property "HBLKNM = UART_RX6_3" for instance <full_lut>.
+    Set property "HBLKNM = UART_RX6_4" for instance <sample_lut>.
+    Set property "HBLKNM = UART_RX6_4" for instance <sample_flop>.
+    Set property "HBLKNM = UART_RX6_4" for instance <sample_dly_flop>.
+    Set property "HBLKNM = UART_RX6_4" for instance <stop_bit_lut>.
+    Set property "HBLKNM = UART_RX6_4" for instance <buffer_write_flop>.
+    Set property "HBLKNM = UART_RX6_4" for instance <stop_bit_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data01_lut>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data0_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data1_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data23_lut>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data2_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data3_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data45_lut>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data4_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data5_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data67_lut>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data6_flop>.
+    Set property "HBLKNM = UART_RX6_2" for instance <data7_flop>.
+    Set property "HBLKNM = UART_RX6_4" for instance <run_lut>.
+    Set property "HBLKNM = UART_RX6_4" for instance <run_flop>.
+    Set property "HBLKNM = UART_RX6_4" for instance <start_bit_lut>.
+    Set property "HBLKNM = UART_RX6_4" for instance <start_bit_flop>.
+    Set property "HBLKNM = UART_RX6_3" for instance <div01_lut>.
+    Set property "HBLKNM = UART_RX6_3" for instance <div0_flop>.
+    Set property "HBLKNM = UART_RX6_3" for instance <div1_flop>.
+    Set property "HBLKNM = UART_RX6_3" for instance <div23_lut>.
+    Set property "HBLKNM = UART_RX6_3" for instance <div2_flop>.
+    Set property "HBLKNM = UART_RX6_3" for instance <div3_flop>.
+    Set property "HBLKNM = UART_RX6_3" for instance <sample_input_lut>.
+    Set property "HBLKNM = UART_RX6_3" for instance <sample_input_flop>.
+    Summary:
+	no macro.
+Unit <uart_rx6> synthesized.
+
+Synthesizing Unit <picoblaze>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\picoblaze.v".
+INFO:Xst:3210 - "C:\Users\Adil\Documents\CSD\test\verilog\picoblaze.v" line 68: Output port <k_write_strobe> of the instance <pblaze_cpu> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <picoblaze> synthesized.
+
+Synthesizing Unit <kcpsm6>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\verilog\kcpsm6.v".
+        hwbuild = 8'b00000000
+        interrupt_vector = 12'b001111111111
+        scratch_pad_memory_size = 64
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <reset_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <run_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <internal_reset_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <sync_sleep_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state1_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state2_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <int_enable_type_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <interrupt_enable_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <interrupt_enable_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <sync_interrupt_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <active_interrupt_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <active_interrupt_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <interrupt_ack_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <pc_move_is_valid_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <move_type_lut>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <pc_mode1_lut>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <pc_mode2_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <push_pop_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_decode0_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_mux_sel0_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <alu_decode1_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <alu_mux_sel1_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_decode2_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_type_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <flag_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <spm_enable_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <k_write_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <spm_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <read_strobe_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <write_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <read_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <regbank_type_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <bank_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <bank_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <sx_addr4_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <arith_carry_xorcy>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <arith_carry_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <lower_parity_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <parity_muxcy>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <upper_parity_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <parity_xorcy>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shift_carry_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shift_carry_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <carry_flag_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <carry_flag_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <init_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <use_zero_flag_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <use_zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <lower_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <lower_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <middle_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <middle_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <upper_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <upper_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[0].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[0].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[1].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[2].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[2].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[3].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[4].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[4].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[5].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[6].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[6].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[7].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[8].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <address_loop[8].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[9].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[10].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <address_loop[10].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.low_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[11].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].upper_pc.low_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <shadow_carry_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_zero_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shadow_zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <shadow_bank_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_bit_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_ram_low>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <stack_ram_high>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[0].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[0].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].lsb_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].lsb_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[0].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <data_path_loop[0].lsb_shift_rotate.shift_bit_lut>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[0].lsb_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[0].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[0].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[1].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[1].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[1].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[2].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[2].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[2].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[2].mid_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[2].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[2].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[3].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[3].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[3].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[4].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[4].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[4].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[4].mid_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[4].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[4].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[5].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[5].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[5].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[6].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[6].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[6].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[6].msb_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[6].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[6].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[7].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[7].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[7].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_REG0" for instance <lower_reg_banks>.
+    Set property "HBLKNM = KCPSM6_REG1" for instance <upper_reg_banks>.
+    Summary:
+	no macro.
+Unit <kcpsm6> synthesized.
+
+Synthesizing Unit <program>.
+    Related source file is "C:\Users\Adil\Documents\CSD\test\picoblaze\program.v".
+    Summary:
+	no macro.
+Unit <program> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 8
+ 1-bit register                                        : 2
+ 10-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 9
+ 3-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 6
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <out_2> of sequential type is unconnected in block <upc>.
+WARNING:Xst:2677 - Node <out_3> of sequential type is unconnected in block <upc>.
+
+Synthesizing (advanced) Unit <rs232_uart>.
+The following registers are absorbed into counter <baud_count>: 1 register on signal <baud_count>.
+Unit <rs232_uart> synthesized (advanced).
+
+Synthesizing (advanced) Unit <up_counter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <up_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 156
+ Flip-Flops                                            : 156
+# Multiplexers                                         : 9
+ 3-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 6
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+ERROR:Xst:528 - Multi-source in Unit <loopback> on signal <col<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <col<0>>
+   Output signal of FDE instance <upc/out_0>
+
+ERROR:Xst:528 - Multi-source in Unit <loopback> on signal <col<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Primary input port <col<1>>
+   Output signal of FDE instance <upc/out_1>
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.44 secs
+ 
+--> 
+
+Total memory usage is 4538796 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

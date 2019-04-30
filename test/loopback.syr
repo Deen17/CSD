@@ -1,0 +1,339 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: loopback.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "loopback.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "loopback"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg484
+
+---- Source Options
+Top Module Name                    : loopback
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\verilog\uart_tx6.v" into library work
+Parsing module <uart_tx6>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\verilog\uart_rx6.v" into library work
+Parsing module <uart_rx6>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\verilog\kcpsm6.v" into library work
+Parsing module <kcpsm6>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\picoblaze\program.v" into library work
+Parsing module <program>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\verilog\rs232_uart.v" into library work
+Parsing module <rs232_uart>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\verilog\picoblaze.v" into library work
+Parsing module <picoblaze>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\verilog\led_driver.v" into library work
+Parsing module <led_driver_wrapper>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" into library work
+Parsing module <loopback>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\infrastructure.v" into library work
+Parsing module <infrastructure>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_controller.v" into library work
+Parsing module <iodrp_controller>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_mcb_controller.v" into library work
+Parsing module <iodrp_mcb_controller>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_raw_wrapper.v" into library work
+Parsing module <mcb_raw_wrapper>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration.v" into library work
+Parsing module <mcb_soft_calibration>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration_top.v" into library work
+Parsing module <mcb_soft_calibration_top>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_ui_top.v" into library work
+Parsing module <mcb_ui_top>.
+Analyzing Verilog file "C:\Users\Solistone\Desktop\New folder\ipcore_dir\ram_interface\user_design\rtl\memc_wrapper.v" into library work
+Parsing module <memc_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <loopback>.
+
+Elaborating module <led_driver_wrapper>.
+
+Elaborating module <rs232_uart>.
+WARNING:HDLCompiler:413 - "C:\Users\Solistone\Desktop\New folder\verilog\rs232_uart.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <uart_tx6>.
+
+Elaborating module <SRL16E(INIT=16'b0)>.
+
+Elaborating module <FD>.
+
+Elaborating module <LUT6(INIT=64'b1111111100000000111111100000000011111111100000001111111100000000)>.
+
+Elaborating module <FDR>.
+
+Elaborating module <LUT6(INIT=64'b1111000011110000111000011110000011111000011110001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110010010000011000001100110010101010010100000101000010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111010011111100111101001111110000000100000000000000010011000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01000000000000000010000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100111110101010110011000000111100001111111111111111111111111111)>.
+
+Elaborating module <LUT6(INIT=64'b1000010101010000000000000000000010101010101010101010101010101010)>.
+
+Elaborating module <LUT6(INIT=64'b010011001100001000000000000000011001100110011001100110011001100)>.
+
+Elaborating module <LUT6(INIT=64'b1000100001110000000000000000000011110000111100001111000011110000)>.
+
+Elaborating module <LUT6(INIT=64'b1000011101000100000000000000000011111111000000001111111100000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110110000000000000000000000000001011010000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111111110000000111111110000000001111000011110001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000000000000)>.
+
+Elaborating module <uart_rx6>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110011110000000000000000000010101010110011000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100101011111111110010101111111100000000000000001100000011000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111000011001100111111111111111111001100101010101111111111111111)>.
+
+Elaborating module <LUT6(INIT=64'b010111100101111101011111010111100000000000000001111111100000000)>.
+
+Elaborating module <LUT6(INIT=64'b010001000100010000000001111000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110110011001100000000000000000001011010101010100000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000010001000100010001000100010001000)>.
+
+Elaborating module <picoblaze>.
+
+Elaborating module <kcpsm6>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111111101010101010100000000000000000000111011101110)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000011000000000000101100000000110001000000000001001100)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000000000000000000000100000000000)>.
+
+Elaborating module <LUT6(INIT=64'b01100101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110000110011111111110000000010000000100000001000000010000000)>.
+
+Elaborating module <LUT6(INIT=64'b0101101000111100111111111111111100000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011101110111000000100111011100000000000000000000001000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111100000000000000000000000000000010001111111111)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111111111111111111100000000000001000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111000100000000000000000000000000000010000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01111001010000000000000000000000100001000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011100001000000000000000000000000000000000000000111100000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1101000000000000000000000000000000000010000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01001111110011111100000000000100001111011111001110)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100000011001100000000000000000010100000101010100000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1000000000000000000000000000000000100000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0100000000000000000000000000000000000001000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010000000000000100000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1010110010101100111111110000000011111111000000001111111100000000)>.
+
+Elaborating module <XORCY>.
+
+Elaborating module <LUT6_2(INIT=64'b010000111011110000000000000000000)>.
+
+Elaborating module <MUXCY>.
+
+Elaborating module <LUT6(INIT=64'b0110100110010110100101100110100110010110011010010110100110010110)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111101010101100110011110000111100001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b011001100110011101010101100110011110000101010100000000000000000)>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <LUT6_2(INIT=64'b1010001010000000000000000000000000000000111100000000000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111101111111111000000000000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111100110011110011000000111100000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111111001100110011001111000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000000000000011001100110011001111000000000000)>.
+
+Elaborating module <RAM32M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+
+Elaborating module <LUT6_2(INIT=64'b010101001010011010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0101010001001010010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100101101001011011101000101011001100110011000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1011111110111100100011111000110010110011101100001000001110000000)>.
+
+Elaborating module <RAM64M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+
+Elaborating module <program>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0111001100001000011010111001100001100011100110000101101100101000010100100110100001001001000000000100001100001000001110010000000000110011110010000010101100001000001000110110000000011010100000000001000100000000000010010100100000000001100010000000000000000,INIT_01=256'b01111001100101000111010100110100011100011000010001101100100000000110100110010000011001011100100001100001101111000101110110001100010110011001010001010101010010000101000010100100010011001100100001001000001010000100010000110100010000011001010000111101100111,INIT_02=256'b01011100110000100101101001000000010110001100101001010110111010000101010011001010010100101101100001010000110010100100111010001000010011000110011001
+0010100001010001001000000110100100011011001010010001001100111001000010110000100100000011100110001111101110011,INIT_03=256'b011111001110100001111010110010100111100011011000011101101100101001110100100010000111001001000000011100000110100001101110000101000110110000011010011010101100101001101000110011100110011011000010011001001110011001100010111001100110000011001010010111101001101,INIT_04=256'b0110001110011000010110110010100001010011001110000100101100001000010000111001100000111011100110000011001100101000001010100110100000100001000000000001101101100000000100110110000000001011000010000000000100000000000001011100101000000000000010011111101100101,INIT_05=256'b01100000001000000001100001100000001000001010000000000011001000110000000101000010111000011010001011001100101000101010110110100010100011101010001001101101100000100100110111100010001010101100001000000101001000011110011010100001110000010100000110100001101,INIT_06=256'b0110001011100010100000011110001011000010100000001110101000000000100000100000000100010000000010000000
+0000011001010000000011111111100000000000000001011101011110000110001011011101001000000,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b010010001010000000100010101100000000000000000000000000000000000000000
+0000000000010010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000011000000000000,INIT_01=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_02=256'b011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001
+0000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_03=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_04=256'b0111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000000010100001000000001010000010100111100000001000,INIT_05=256'b0110100010001000010100001001000011101001010010010011000000001010011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000011110000000100001111000000010000111100000001000,INIT_06=256'b0100000001000001101000000100001001000011101010100100001110100101001001010010000011000
+1001100000000000000010000011010000011100001001000000000000001000000000111000100001011000011100000,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b011111010000001100010110100100001010101010101010101010101
+010101010101010101010101001001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=9,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=32'b0,RST_PRIORITY_A="CE",SRVAL_A=32'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=9,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=32'b0,RST_PRIORITY_B="CE",SRVAL_B=32'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b0,INIT_01=256'b0,INIT_02=256'b0,INIT_03=256'b0,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT
+_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b0,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+WARNING:HDLCompiler:91 - "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" Line 200: Signal <col> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" Line 207: Signal <col> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" Line 214: Signal <col> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" Line 221: Signal <col> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" Line 228: Signal <col> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+ERROR:HDLCompiler:1401 - "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" Line 152: Signal pb_in_port[7] in unit loopback is connected to following multiple drivers:
+Driver 0: output signal pb_in_port[7] of instance Latch (pb_in_port[7]).
+Driver 1: output signal pb_in_port[7] of instance Flip-flop (pb_in_port).
+Driver 0: output signal pb_in_port[6] of instance Latch (pb_in_port[6]).
+Driver 1: output signal pb_in_port[6] of instance Flip-flop (pb_in_port).
+Driver 0: output signal pb_in_port[5] of instance Latch (pb_in_port[5]).
+Driver 1: output signal pb_in_port[5] of instance Flip-flop (pb_in_port).
+Driver 0: output signal pb_in_port[4] of instance Latch (pb_in_port[4]).
+Driver 1: output signal pb_in_port[4] of instance Flip-flop (pb_in_port).
+Driver 0: output signal pb_in_port[3] of instance Latch (pb_in_port[3]).
+Driver 1: output signal pb_in_port[3] of instance Flip-flop (pb_in_port).
+Driver 0: output signal pb_in_port[2] of instance Latch (pb_in_port[2]).
+Driver 1: output signal pb_in_port[2] of instance Flip-flop (pb_in_port).
+Driver 0: output signal pb_in_port[1] of instance Latch (pb_in_port[1]).
+Driver 1: output signal pb_in_port[1] of instance Flip-flop (pb_in_port).
+Driver 0: output signal pb_in_port[0] of instance Latch (pb_in_port[0]).
+Driver 1: output signal pb_in_port[0] of instance Flip-flop (pb_in_port).
+Module loopback remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "C:\Users\Solistone\Desktop\New folder\verilog\loopback.v" Line 22: Empty module <loopback> remains a black box.
+--> 
+
+Total memory usage is 4487868 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

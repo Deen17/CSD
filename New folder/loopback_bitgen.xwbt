@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Adil\Documents\CSD\New folder\loopback.ncd
+OUTFILE=C:\Users\Adil\Documents\CSD\New folder\loopback.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg484
+WORKINGDIR=C:\Users\Adil\Documents\CSD\New folder
+LICENSE=WebPack
+USER_INFO=211659723_0_0_679
