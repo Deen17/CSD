@@ -9,8 +9,8 @@ CONSTANT uart_data_tx     , 03    ; UART transmit write port
 CONSTANT data_present     , 04    ; UART stat read port, lsb
 CONSTANT buffer_full      , 05    ; UART stat read port, lsb
 CONSTANT keys 			  , 06    ; KEYPAD input
-CONSTANT ram_in,			07	  ; RAM input
-CONSTANT ram_out, 			08	  ; ram output
+CONSTANT ram_in,			07	  ; write to RAM
+CONSTANT ram_out, 			08	  ; read from RAM
 
 ;================================================================
 ; Useful constant declarations...

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-ABAAU9H::  Tue Apr 30 13:30:00 2019
+DESKTOP-ABAAU9H::  Tue Apr 30 20:19:44 2019
 
 par -w -intstyle ise -ol high -mt off loopback_map.ncd loopback.ncd
 loopback.pcf 
@@ -133,7 +133,7 @@ Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9
 
 Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 Total REAL time to Router completion: 9 secs 
-Total CPU time to Router completion: 9 secs 
+Total CPU time to Router completion: 8 secs 
 
 Partition Implementation Status
 -------------------------------

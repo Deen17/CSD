@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.67 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.67 secs
  
 --> Reading design: loopback.prj
 
@@ -99,6 +99,9 @@ DSP48 Utilization Ratio            : 100
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"../test/Test/ipcore_dir"  }
+
 =========================================================================
 
 
@@ -123,6 +126,22 @@ Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\up_counter.v" into
 Parsing module <up_counter>.
 Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\verilog\loopback.v" into library work
 Parsing module <loopback>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\infrastructure.v" into library work
+Parsing module <infrastructure>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_controller.v" into library work
+Parsing module <iodrp_controller>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\iodrp_mcb_controller.v" into library work
+Parsing module <iodrp_mcb_controller>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_raw_wrapper.v" into library work
+Parsing module <mcb_raw_wrapper>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration.v" into library work
+Parsing module <mcb_soft_calibration>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_soft_calibration_top.v" into library work
+Parsing module <mcb_soft_calibration_top>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\mcb_controller\mcb_ui_top.v" into library work
+Parsing module <mcb_ui_top>.
+Analyzing Verilog file "C:\Users\Adil\Documents\CSD\test\Test\ipcore_dir\ram_interface\user_design\rtl\memc_wrapper.v" into library work
+Parsing module <memc_wrapper>.
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -1031,8 +1050,8 @@ pb_interrupt   |    2.729|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.81 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.20 secs
  
 --> 
 
